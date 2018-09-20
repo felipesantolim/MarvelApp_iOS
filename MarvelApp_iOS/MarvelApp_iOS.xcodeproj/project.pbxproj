@@ -22,6 +22,8 @@
 		34E28D48215452E2003D5478 /* MarvelAppSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34E28D2621544BF9003D5478 /* MarvelAppSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		34E28D49215452E2003D5478 /* MarvelAppApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E28D2721544BF9003D5478 /* MarvelAppApi.framework */; };
 		34E28D4A215452E2003D5478 /* MarvelAppApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34E28D2721544BF9003D5478 /* MarvelAppApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34E28D5621545657003D5478 /* MAFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D5421545657003D5478 /* MAFeedViewCell.swift */; };
+		34E28D5721545657003D5478 /* MAFeedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E28D5521545657003D5478 /* MAFeedViewCell.xib */; };
 		40BC87417F2E277C463E2F0B /* Pods_MarvelApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105388192F61F748F9AFB73 /* Pods_MarvelApp_iOS.framework */; };
 		A7662CF90678D82D02FC6C0F /* Pods_MarvelApp_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47EEC8A48D5CED5EC6070B9 /* Pods_MarvelApp_iOSUITests.framework */; };
 		BBC6FC853027AA0F90160D9B /* Pods_MarvelApp_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91120B034F953816DF7D61BA /* Pods_MarvelApp_iOSTests.framework */; };
@@ -79,6 +81,8 @@
 		34E28D2E21544CC9003D5478 /* MADetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADetailViewController.swift; sourceTree = "<group>"; };
 		34E28D3021544CD0003D5478 /* MADetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADetailView.swift; sourceTree = "<group>"; };
 		34E28D3521545096003D5478 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		34E28D5421545657003D5478 /* MAFeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFeedViewCell.swift; sourceTree = "<group>"; };
+		34E28D5521545657003D5478 /* MAFeedViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAFeedViewCell.xib; sourceTree = "<group>"; };
 		36101B999FCC6A81320896ED /* Pods-MarvelApp_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApp_iOSTests/Pods-MarvelApp_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		4FE1135D63C6CCA6E7B63C52 /* Pods-MarvelApp_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApp_iOS/Pods-MarvelApp_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5A98CE5963C7A2FAC665068F /* Pods-MarvelApp_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApp_iOSTests/Pods-MarvelApp_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 		34E28D0D21544BC7003D5478 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				34E28D5421545657003D5478 /* MAFeedViewCell.swift */,
+				34E28D5521545657003D5478 /* MAFeedViewCell.xib */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			buildConfigurationList = 34D6A8A0215428B5003FDB6A /* Build configuration list for PBXNativeTarget "MarvelApp_iOS" */;
 			buildPhases = (
 				A6CBAB941404CED6C7EF6AD0 /* [CP] Check Pods Manifest.lock */,
+				34E28D5821545883003D5478 /* ShellScript */,
 				34D6A874215428B3003FDB6A /* Sources */,
 				34D6A875215428B3003FDB6A /* Frameworks */,
 				34D6A876215428B3003FDB6A /* Resources */,
@@ -420,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E28D5721545657003D5478 /* MAFeedViewCell.xib in Resources */,
 				34E28D1B21544BC7003D5478 /* LaunchScreen.storyboard in Resources */,
 				34E28D1D21544BC7003D5478 /* Assets.xcassets in Resources */,
 				34E28D1C21544BC7003D5478 /* Main.storyboard in Resources */,
@@ -519,6 +527,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		34E28D5821545883003D5478 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
+		};
 		62D38B51A39EDEA5D26D8610 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -611,6 +636,7 @@
 				34E28D1E21544BC7003D5478 /* AppDelegate.swift in Sources */,
 				34E28D1A21544BC7003D5478 /* MAFeedViewController.swift in Sources */,
 				34E28D2F21544CC9003D5478 /* MADetailViewController.swift in Sources */,
+				34E28D5621545657003D5478 /* MAFeedViewCell.swift in Sources */,
 				34E28D3121544CD0003D5478 /* MADetailView.swift in Sources */,
 				34E28D3621545096003D5478 /* R.generated.swift in Sources */,
 			);

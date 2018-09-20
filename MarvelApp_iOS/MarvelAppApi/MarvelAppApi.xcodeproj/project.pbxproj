@@ -61,10 +61,42 @@
 		34E28CE821544ABB003D5478 /* MarvelAppApi */ = {
 			isa = PBXGroup;
 			children = (
+				34E28D5921545AB6003D5478 /* Model */,
+				34E28D5B21545AB6003D5478 /* Manager */,
+				34E28D5C21545AB6003D5478 /* Business */,
+				34E28D5A21545AB6003D5478 /* Provider */,
 				34E28CE921544ABB003D5478 /* MarvelAppApi.h */,
 				34E28CEA21544ABB003D5478 /* Info.plist */,
 			);
 			path = MarvelAppApi;
+			sourceTree = "<group>";
+		};
+		34E28D5921545AB6003D5478 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34E28D5A21545AB6003D5478 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		34E28D5B21545AB6003D5478 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		34E28D5C21545AB6003D5478 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
 			sourceTree = "<group>";
 		};
 		5CE7EC7A0C84AE7EBC3F5B7D /* Pods */ = {

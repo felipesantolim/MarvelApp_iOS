@@ -10,4 +10,13 @@ import UIKit
 
 class MAFeedView: UIView {
     
+    @IBOutlet public weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.allowsMultipleSelection = false
+            collectionView.showsVerticalScrollIndicator = false
+            collectionView.showsHorizontalScrollIndicator = false
+            collectionView.register(R.nib.maFeedViewCell(),
+                                    forCellWithReuseIdentifier: R.nib.maFeedViewCell.identifier)
+        }
+    }
 }

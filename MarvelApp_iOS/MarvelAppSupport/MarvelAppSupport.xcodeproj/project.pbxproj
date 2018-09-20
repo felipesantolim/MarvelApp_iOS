@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		2516E7731362D006BF1F612C /* Pods_MarvelAppSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716AC6F58A6C7E52EBA55B6A /* Pods_MarvelAppSupport.framework */; };
 		34E28D0021544B1E003D5478 /* MarvelAppSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28CFE21544B1E003D5478 /* MarvelAppSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34E28D5121545578003D5478 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D5021545578003D5478 /* UIColor+Colors.swift */; };
+		34E28D53215455DB003D5478 /* MABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D52215455DB003D5478 /* MABaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		34E28CFB21544B1E003D5478 /* MarvelAppSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelAppSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E28CFE21544B1E003D5478 /* MarvelAppSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarvelAppSupport.h; sourceTree = "<group>"; };
 		34E28CFF21544B1E003D5478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34E28D5021545578003D5478 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
+		34E28D52215455DB003D5478 /* MABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MABaseViewController.swift; sourceTree = "<group>"; };
 		665B216F036DD4DC5663F424 /* Pods-MarvelAppSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppSupport.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MarvelAppSupport/Pods-MarvelAppSupport.debug.xcconfig"; sourceTree = "<group>"; };
 		716AC6F58A6C7E52EBA55B6A /* Pods_MarvelAppSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelAppSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF78712EB59A2BFABE834F57 /* Pods-MarvelAppSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppSupport.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MarvelAppSupport/Pods-MarvelAppSupport.release.xcconfig"; sourceTree = "<group>"; };
@@ -61,10 +65,36 @@
 		34E28CFD21544B1E003D5478 /* MarvelAppSupport */ = {
 			isa = PBXGroup;
 			children = (
+				34E28D4E21545560003D5478 /* Extensions */,
+				34E28D4D21545560003D5478 /* Json */,
+				34E28D4F21545560003D5478 /* UIKIt */,
 				34E28CFE21544B1E003D5478 /* MarvelAppSupport.h */,
 				34E28CFF21544B1E003D5478 /* Info.plist */,
 			);
 			path = MarvelAppSupport;
+			sourceTree = "<group>";
+		};
+		34E28D4D21545560003D5478 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		34E28D4E21545560003D5478 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				34E28D5021545578003D5478 /* UIColor+Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		34E28D4F21545560003D5478 /* UIKIt */ = {
+			isa = PBXGroup;
+			children = (
+				34E28D52215455DB003D5478 /* MABaseViewController.swift */,
+			);
+			path = UIKIt;
 			sourceTree = "<group>";
 		};
 		F54E6E65F4CDBABCCA0DB75F /* Pods */ = {
@@ -121,6 +151,7 @@
 				TargetAttributes = {
 					34E28CFA21544B1E003D5478 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -192,6 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E28D5121545578003D5478 /* UIColor+Colors.swift in Sources */,
+				34E28D53215455DB003D5478 /* MABaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 665B216F036DD4DC5663F424 /* Pods-MarvelAppSupport.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -334,10 +368,15 @@
 				INFOPLIST_FILE = MarvelAppSupport/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsantolim.MarvelAppSupport;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -347,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF78712EB59A2BFABE834F57 /* Pods-MarvelAppSupport.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,7 +397,11 @@
 				INFOPLIST_FILE = MarvelAppSupport/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsantolim.MarvelAppSupport;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

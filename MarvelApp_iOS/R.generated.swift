@@ -36,13 +36,24 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 0 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
   struct nib {
+    /// Nib `MAFeedViewCell`.
+    static let maFeedViewCell = _R.nib._MAFeedViewCell()
+    
+    /// `UINib(name: "MAFeedViewCell", in: bundle)`
+    static func maFeedViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.maFeedViewCell)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `MAFeedViewCell`.
+    static let maFeedViewCell: Rswift.ReuseIdentifier<MAFeedViewCell> = Rswift.ReuseIdentifier(identifier: "MAFeedViewCell")
+    
     fileprivate init() {}
   }
   
@@ -95,6 +106,20 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
+    struct _MAFeedViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = MAFeedViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "MAFeedViewCell"
+      let name = "MAFeedViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MAFeedViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MAFeedViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
