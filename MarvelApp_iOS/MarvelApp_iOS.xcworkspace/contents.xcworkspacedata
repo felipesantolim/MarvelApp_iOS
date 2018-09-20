@@ -5,6 +5,12 @@
       location = "group:MarvelApp_iOS.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:MarvelAppApi/MarvelAppApi.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MarvelAppSupport/MarvelAppSupport.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
