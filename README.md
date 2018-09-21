@@ -9,36 +9,36 @@ use_frameworks!
 workspace 'MarvelApp_iOS.xcworkspace'
 
 target 'MarvelApp_iOS' do
+    
+  pod 'lottie-ios'
+  pod 'R.swift'
+  pod 'ReachabilitySwift'
+  pod 'Fabric'
+  pod 'Crashlytics'
+  pod 'Kingfisher'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'Alamofire', '~> 4.7'
+  pod 'CryptoSwift'
+  
+  target 'MarvelApp_iOSTests' do
+    inherit! :search_paths
+  end
 
-pod 'lottie-ios'
-pod 'R.swift'
-pod 'ReachabilitySwift'
-pod 'Fabric'
-pod 'Crashlytics'
-pod 'Kingfisher'
-pod 'SwiftyJSON', '~> 4.0'
-pod 'Alamofire', '~> 4.7'
-pod 'CryptoSwift'
-
-target 'MarvelApp_iOSTests' do
-inherit! :search_paths
-end
-
-target 'MarvelApp_iOSUITests' do
-inherit! :search_paths
-end
+  target 'MarvelApp_iOSUITests' do
+    inherit! :search_paths
+  end
 
 end
 
 target 'MarvelAppApi' do
-project 'MarvelAppApi/MarvelAppApi.xcodeproj'
-pod 'SwiftyJSON', '~> 4.0'
-pod 'Alamofire', '~> 4.7'
-pod 'CryptoSwift'
+    project 'MarvelAppApi/MarvelAppApi.xcodeproj'
+    pod 'SwiftyJSON', '~> 4.0'
+    pod 'Alamofire', '~> 4.7'
+    pod 'CryptoSwift'
 end
 
 target 'MarvelAppSupport' do
-project 'MarvelAppSupport/MarvelAppSupport.xcodeproj'
+    project 'MarvelAppSupport/MarvelAppSupport.xcodeproj'
 end
 
 ```
