@@ -13,6 +13,8 @@ import MarvelAppApi
 class MAFeedViewController: MABaseViewController {
     
     /// Properties
+    private var currentPg: Int = 1
+    private var fetchingMore: Bool = false
     private var chars = [MACharactersModel]()
     private var mainView: MAFeedView {
         return self.view as! MAFeedView
@@ -34,12 +36,17 @@ class MAFeedViewController: MABaseViewController {
     override func layout() {}
     
     override func service() {
-        _ = MAManager.shared.fetchAllCharacters(with: 0, { _chars in
+        fetchingMore = true
+        _ = MAManager.shared.fetchAllCharacters(with: currentPg, { _chars in
             if let `_chars` = _chars, _chars.count > 0 {
-                self.chars = _chars
-                _ = DispatchQueue.main.async {
-                    self.mainView.collectionView.reloadData()
+                _ = _chars.map { item in
+                    self.chars.append(item)
                 }
+                self.currentPg += 1
+                self.fetchingMore = !self.fetchingMore
+            }
+            _ = DispatchQueue.main.async {
+                self.mainView.collectionView.reloadData()
             }
         })
     }
@@ -66,6 +73,15 @@ extension MAFeedViewController: UICollectionViewDataSource {
 extension MAFeedViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight - scrollView.frame.height * 2 {
+            if !fetchingMore { service() }
+        }
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
