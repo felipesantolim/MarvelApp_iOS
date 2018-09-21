@@ -40,8 +40,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 1 images.
   struct image {
+    /// Image `Marvel-Logo`.
+    static let marvelLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "Marvel-Logo")
+    
+    /// `UIImage(named: "Marvel-Logo", bundle: ..., traitCollection: ...)`
+    static func marvelLogo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.marvelLogo, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
@@ -229,13 +237,18 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try main.validate()
+      try launchScreen.validate()
     }
     
-    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
+    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UIViewController
       
       let bundle = R.hostingBundle
       let name = "LaunchScreen"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "Marvel-Logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Marvel-Logo' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }
