@@ -55,7 +55,7 @@ Utilizei MVC com as camadas Infrastructure, Manager, Business e Provider a fim d
 # ViewController:
  Esta camada atua como uma intermediária entre as camadas View e Manager, ela é reponsável por notificar as Views sobre eventuais mudanças de modelos e vice-versa, ainda nesta camada faço algumas tratativas de eventos, tais como: IBActions e Delegates/DataSources.
  
- # View:
+# View:
   Responsável por toda parte de apresentação, animação a regras de view. Para abstrair um pouco e deixar mais organizado mantenho todos os IBOutlets aqui ele eles são acessados direto pela controller:
   
 ```<swift>
@@ -63,8 +63,8 @@ Utilizei MVC com as camadas Infrastructure, Manager, Business e Provider a fim d
         return self.view as! MAFeedView
     }
 ```
-  
-  # Manager:
+
+# Manager:
    Nesta camada controlo o fluxo de requisições entre a camada ViewController e Business. Ela é exclusivamente chamada pela camada ViewController como uma interface.
    
 ```<swift>
@@ -82,7 +82,6 @@ Utilizei MVC com as camadas Infrastructure, Manager, Business e Provider a fim d
             }
         })
 ```
-   
 ```<swift>
 public class MAManager: MAManagerProtocol {
     
@@ -94,7 +93,7 @@ public class MAManager: MAManagerProtocol {
 } 
 ```
    
-   # Business:
+# Business:
     Esta é uma das mais importantes camadas do aplicativo, aqui é onde comtém estruturas internas responsáveis por todas as regras de negócio. Ela deve ser exclusivamente acessada pela camada Manager e invocar a camada Provider (quando necessário). Ainda nesta camada, é onde recebo os "dados primitivos" (ex:. Data?, Dictionary?) e criá-los em modelos através da realização do parse.
 ```<swift>
 import SwiftyJSON
@@ -198,9 +197,8 @@ extension MAProvider {
 <img src="https://github.com/felipesantolim/MarvelApp_iOS/blob/master/Images/04.PNG" width="320"/>
 <img src="https://github.com/felipesantolim/MarvelApp_iOS/blob/master/Images/07.PNG" width="320"/>
 <img src="https://github.com/felipesantolim/MarvelApp_iOS/blob/master/Images/08.PNG" width="320"/>
-     
-# My Profile (RESUME):
 
+# My Profile (RESUME):
 I've been spending my time with a lot of contents that involve technologies because I breathe this kind of topic, I have more than six (7) years of experience in iOS development and I don't stop of growing my knowledge in this field. I'm passionate about Apple devices and so on.
 
 I'm very proactive, dynamic and hardworking (of course).
@@ -217,7 +215,10 @@ https://itunes.apple.com/us/app/fipe/id1374656563?mt=8 </br>
 https://www.cocoacontrols.com/controls/shfsignature
      
 # O que eu faria com mais tempo?
-     
+
+- Mais atenção e abstração de código
+- Implementaria o ReachabilitySwift
+- Implementaria o lottie-ios
 - Fabric (Crashlytics)
 - Implementaria extensions para UIColor.
 - Faria o uso de "Fakery" para cirar mocks precisos quando rodarmos em um 
