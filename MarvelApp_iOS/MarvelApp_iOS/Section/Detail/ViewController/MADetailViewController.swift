@@ -7,24 +7,65 @@
 //
 
 import UIKit
+import MarvelAppApi
+import MarvelAppSupport
 
-class MADetailViewController: UIViewController {
+class MADetailViewController: MABaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    private var character: MACharactersModel?
+    private var mainView: MADetailView {
+        return self.view as! MADetailView
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+        layout()
     }
-    */
+    
+    override func setup() {
+        mainView.tableView.delegate = self
+        mainView.tableView.dataSource = self
+    }
+    
+    override func layout() {
+        setHeader()
+        self.navigationItem.title = R.string.details.detailsTitle().uppercased()
+    }
+}
 
+extension MADetailViewController {
+    public func configure(with model: MACharactersModel) {
+        self.character = model
+    }
+}
+
+extension MADetailViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int { return 1 }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return 1 }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: R.reuseIdentifier.maDetailViewCell.identifier, for: indexPath) as! MADetailViewCell
+        if let `character` = character {
+            cell.config(character.description)
+        }
+        return cell
+    }
+}
+
+extension MADetailViewController: UITableViewDelegate {}
+
+extension MADetailViewController {
+    
+    private func setHeader() {
+        let header = MADetailViewHeader(frame: CGRect(x: 0.0, y: 0.0, width: mainView.bounds.width, height: 350))
+        header.backgroundColor = .clear
+        if let `character` = character {
+            header.configure(with: character)
+        }
+        mainView.tableView.tableHeaderView = header
+    }
 }

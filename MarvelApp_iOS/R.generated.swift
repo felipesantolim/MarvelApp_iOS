@@ -45,10 +45,24 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
+    /// Nib `MADetailViewCell`.
+    static let maDetailViewCell = _R.nib._MADetailViewCell()
+    /// Nib `MADetailViewHeader`.
+    static let maDetailViewHeader = _R.nib._MADetailViewHeader()
     /// Nib `MAFeedViewCell`.
     static let maFeedViewCell = _R.nib._MAFeedViewCell()
+    
+    /// `UINib(name: "MADetailViewCell", in: bundle)`
+    static func maDetailViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.maDetailViewCell)
+    }
+    
+    /// `UINib(name: "MADetailViewHeader", in: bundle)`
+    static func maDetailViewHeader(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.maDetailViewHeader)
+    }
     
     /// `UINib(name: "MAFeedViewCell", in: bundle)`
     static func maFeedViewCell(_: Void = ()) -> UIKit.UINib {
@@ -58,8 +72,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `MADetailViewCell`.
+    static let maDetailViewCell: Rswift.ReuseIdentifier<MADetailViewCell> = Rswift.ReuseIdentifier(identifier: "MADetailViewCell")
     /// Reuse identifier `MAFeedViewCell`.
     static let maFeedViewCell: Rswift.ReuseIdentifier<MAFeedViewCell> = Rswift.ReuseIdentifier(identifier: "MAFeedViewCell")
     
@@ -91,8 +107,61 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 0 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
+    /// This `R.string.details` struct is generated, and contains static references to 1 localization keys.
+    struct details {
+      /// Value: Details
+      static let detailsTitle = Rswift.StringResource(key: "detailsTitle", tableName: "Details", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Details
+      static func detailsTitle(_: Void = ()) -> String {
+        return NSLocalizedString("detailsTitle", tableName: "Details", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.feed` struct is generated, and contains static references to 1 localization keys.
+    struct feed {
+      /// Value: Chars © 2018 MARVEL
+      static let feedTitle = Rswift.StringResource(key: "feedTitle", tableName: "Feed", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Chars © 2018 MARVEL
+      static func feedTitle(_: Void = ()) -> String {
+        return NSLocalizedString("feedTitle", tableName: "Feed", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.global` struct is generated, and contains static references to 3 localization keys.
+    struct global {
+      /// Value: 
+      static let noInternet = Rswift.StringResource(key: "noInternet", tableName: "Global", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Ok
+      static let ok = Rswift.StringResource(key: "ok", tableName: "Global", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: There's no description
+      static let noDesc = Rswift.StringResource(key: "noDesc", tableName: "Global", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: 
+      static func noInternet(_: Void = ()) -> String {
+        return NSLocalizedString("noInternet", tableName: "Global", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Ok
+      static func ok(_: Void = ()) -> String {
+        return NSLocalizedString("ok", tableName: "Global", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: There's no description
+      static func noDesc(_: Void = ()) -> String {
+        return NSLocalizedString("noDesc", tableName: "Global", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
@@ -115,6 +184,31 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
+    struct _MADetailViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = MADetailViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "MADetailViewCell"
+      let name = "MADetailViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MADetailViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MADetailViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _MADetailViewHeader: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MADetailViewHeader"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _MAFeedViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = MAFeedViewCell
       

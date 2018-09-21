@@ -11,6 +11,7 @@
 		34E28D0021544B1E003D5478 /* MarvelAppSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28CFE21544B1E003D5478 /* MarvelAppSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E28D5121545578003D5478 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D5021545578003D5478 /* UIColor+Colors.swift */; };
 		34E28D53215455DB003D5478 /* MABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D52215455DB003D5478 /* MABaseViewController.swift */; };
+		34E28D7621549EBD003D5478 /* BaseXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D7521549EBD003D5478 /* BaseXibView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		34E28CFF21544B1E003D5478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34E28D5021545578003D5478 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		34E28D52215455DB003D5478 /* MABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MABaseViewController.swift; sourceTree = "<group>"; };
+		34E28D7521549EBD003D5478 /* BaseXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseXibView.swift; sourceTree = "<group>"; };
 		665B216F036DD4DC5663F424 /* Pods-MarvelAppSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppSupport.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MarvelAppSupport/Pods-MarvelAppSupport.debug.xcconfig"; sourceTree = "<group>"; };
 		716AC6F58A6C7E52EBA55B6A /* Pods_MarvelAppSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelAppSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF78712EB59A2BFABE834F57 /* Pods-MarvelAppSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppSupport.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MarvelAppSupport/Pods-MarvelAppSupport.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				34E28D52215455DB003D5478 /* MABaseViewController.swift */,
+				34E28D7521549EBD003D5478 /* BaseXibView.swift */,
 			);
 			path = UIKIt;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34E28D5121545578003D5478 /* UIColor+Colors.swift in Sources */,
+				34E28D7621549EBD003D5478 /* BaseXibView.swift in Sources */,
 				34E28D53215455DB003D5478 /* MABaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

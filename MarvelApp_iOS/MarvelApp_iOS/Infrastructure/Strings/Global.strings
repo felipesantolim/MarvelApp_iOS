@@ -1,0 +1,11 @@
+/* 
+  Global.strings
+  MarvelApp_iOS
+
+  Created by Felipe Henrique Santolim on 21/09/18.
+  Copyright © 2018 Felipe Santolim. All rights reserved.
+*/
+
+"ok" = "Ok";
+"noInternet" = "";
+"noDesc" = "There's no description";

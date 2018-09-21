@@ -31,7 +31,8 @@ extension MAProvider {
             "apikey": keys.publicKey,
             "ts": ts,
             "hash": (ts + keys.privateKey + keys.publicKey).md5(),
-            "limit" : 12,
+            "orderBy": "name",
+            "limit" : 21,
             "offset" : page,
         ]
         

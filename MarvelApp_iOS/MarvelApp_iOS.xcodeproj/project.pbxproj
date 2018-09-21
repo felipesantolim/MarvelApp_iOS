@@ -25,6 +25,13 @@
 		34E28D5621545657003D5478 /* MAFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D5421545657003D5478 /* MAFeedViewCell.swift */; };
 		34E28D5721545657003D5478 /* MAFeedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E28D5521545657003D5478 /* MAFeedViewCell.xib */; };
 		34E28D5E21545C3D003D5478 /* Service.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34E28D5D21545C3D003D5478 /* Service.plist */; };
+		34E28D7321549B6C003D5478 /* MADetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D7121549B6C003D5478 /* MADetailViewCell.swift */; };
+		34E28D7421549B6C003D5478 /* MADetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E28D7221549B6C003D5478 /* MADetailViewCell.xib */; };
+		34E28D7821549F03003D5478 /* MADetailViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D7721549F03003D5478 /* MADetailViewHeader.swift */; };
+		34E28D7A21549F0C003D5478 /* MADetailViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E28D7921549F0C003D5478 /* MADetailViewHeader.xib */; };
+		34E28D7D2154A670003D5478 /* Global.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34E28D7C2154A670003D5478 /* Global.strings */; };
+		34E28D7F2154A775003D5478 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34E28D7E2154A775003D5478 /* Feed.strings */; };
+		34E28D812154A798003D5478 /* Details.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34E28D802154A798003D5478 /* Details.strings */; };
 		40BC87417F2E277C463E2F0B /* Pods_MarvelApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105388192F61F748F9AFB73 /* Pods_MarvelApp_iOS.framework */; };
 		A7662CF90678D82D02FC6C0F /* Pods_MarvelApp_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47EEC8A48D5CED5EC6070B9 /* Pods_MarvelApp_iOSUITests.framework */; };
 		BBC6FC853027AA0F90160D9B /* Pods_MarvelApp_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91120B034F953816DF7D61BA /* Pods_MarvelApp_iOSTests.framework */; };
@@ -85,6 +92,13 @@
 		34E28D5421545657003D5478 /* MAFeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFeedViewCell.swift; sourceTree = "<group>"; };
 		34E28D5521545657003D5478 /* MAFeedViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MAFeedViewCell.xib; sourceTree = "<group>"; };
 		34E28D5D21545C3D003D5478 /* Service.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Service.plist; sourceTree = "<group>"; };
+		34E28D7121549B6C003D5478 /* MADetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADetailViewCell.swift; sourceTree = "<group>"; };
+		34E28D7221549B6C003D5478 /* MADetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MADetailViewCell.xib; sourceTree = "<group>"; };
+		34E28D7721549F03003D5478 /* MADetailViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MADetailViewHeader.swift; sourceTree = "<group>"; };
+		34E28D7921549F0C003D5478 /* MADetailViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MADetailViewHeader.xib; sourceTree = "<group>"; };
+		34E28D7C2154A670003D5478 /* Global.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Global.strings; sourceTree = "<group>"; };
+		34E28D7E2154A775003D5478 /* Feed.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Feed.strings; sourceTree = "<group>"; };
+		34E28D802154A798003D5478 /* Details.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Details.strings; sourceTree = "<group>"; };
 		36101B999FCC6A81320896ED /* Pods-MarvelApp_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApp_iOSTests/Pods-MarvelApp_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		4FE1135D63C6CCA6E7B63C52 /* Pods-MarvelApp_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApp_iOS/Pods-MarvelApp_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5A98CE5963C7A2FAC665068F /* Pods-MarvelApp_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApp_iOSTests/Pods-MarvelApp_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +221,10 @@
 		34E28D0921544BC7003D5478 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				34E28D7121549B6C003D5478 /* MADetailViewCell.swift */,
+				34E28D7221549B6C003D5478 /* MADetailViewCell.xib */,
+				34E28D7721549F03003D5478 /* MADetailViewHeader.swift */,
+				34E28D7921549F0C003D5478 /* MADetailViewHeader.xib */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -257,6 +275,7 @@
 		34E28D1021544BC7003D5478 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				34E28D7B2154A65F003D5478 /* Strings */,
 				34E28D1121544BC7003D5478 /* Plist */,
 				34E28D1221544BC7003D5478 /* Storyboard */,
 				34E28D1721544BC7003D5478 /* Resources */,
@@ -288,6 +307,16 @@
 				34E28D1821544BC7003D5478 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		34E28D7B2154A65F003D5478 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				34E28D7C2154A670003D5478 /* Global.strings */,
+				34E28D7E2154A775003D5478 /* Feed.strings */,
+				34E28D802154A798003D5478 /* Details.strings */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		529216A4EADC66542BF62D0B /* Frameworks */ = {
@@ -431,10 +460,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				34E28D5721545657003D5478 /* MAFeedViewCell.xib in Resources */,
+				34E28D812154A798003D5478 /* Details.strings in Resources */,
 				34E28D1B21544BC7003D5478 /* LaunchScreen.storyboard in Resources */,
 				34E28D5E21545C3D003D5478 /* Service.plist in Resources */,
+				34E28D7A21549F0C003D5478 /* MADetailViewHeader.xib in Resources */,
 				34E28D1D21544BC7003D5478 /* Assets.xcassets in Resources */,
+				34E28D7F2154A775003D5478 /* Feed.strings in Resources */,
 				34E28D1C21544BC7003D5478 /* Main.storyboard in Resources */,
+				34E28D7421549B6C003D5478 /* MADetailViewCell.xib in Resources */,
+				34E28D7D2154A670003D5478 /* Global.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,10 +673,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				34E28D2D21544C8F003D5478 /* MAFeedView.swift in Sources */,
+				34E28D7821549F03003D5478 /* MADetailViewHeader.swift in Sources */,
 				34E28D1E21544BC7003D5478 /* AppDelegate.swift in Sources */,
 				34E28D1A21544BC7003D5478 /* MAFeedViewController.swift in Sources */,
 				34E28D2F21544CC9003D5478 /* MADetailViewController.swift in Sources */,
 				34E28D5621545657003D5478 /* MAFeedViewCell.swift in Sources */,
+				34E28D7321549B6C003D5478 /* MADetailViewCell.swift in Sources */,
 				34E28D3121544CD0003D5478 /* MADetailView.swift in Sources */,
 				34E28D3621545096003D5478 /* R.generated.swift in Sources */,
 			);

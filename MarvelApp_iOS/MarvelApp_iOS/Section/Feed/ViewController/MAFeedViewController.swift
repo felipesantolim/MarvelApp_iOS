@@ -33,7 +33,9 @@ class MAFeedViewController: MABaseViewController {
         mainView.collectionView.dataSource = self
     }
     
-    override func layout() {}
+    override func layout() {
+        self.navigationItem.title = R.string.feed.feedTitle().uppercased()
+    }
     
     override func service() {
         fetchingMore = true
@@ -42,7 +44,7 @@ class MAFeedViewController: MABaseViewController {
                 _ = _chars.map { item in
                     self.chars.append(item)
                 }
-                self.currentPg += 1
+                self.currentPg += 22
                 self.fetchingMore = !self.fetchingMore
             }
             _ = DispatchQueue.main.async {
@@ -63,7 +65,7 @@ extension MAFeedViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.maFeedViewCell.identifier,
                                                       for: indexPath) as! MAFeedViewCell
-        cell.configure(with: "")
+        cell.configure(with: chars[indexPath.item])
         return cell
         
     }
@@ -72,7 +74,13 @@ extension MAFeedViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension MAFeedViewController: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let `detail` = storyboard?.instantiateViewController(
+            withIdentifier: R.storyboard.main.maDetailViewController.identifier) as? MADetailViewController {
+            detail.configure(with: chars[indexPath.item])
+            navigationController?.pushViewController(detail, animated: true)
+        }
+    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
@@ -95,7 +103,7 @@ extension MAFeedViewController: UICollectionViewDelegateFlowLayout {
         let numberOfColumns: CGFloat = 3
         let width = mainView.collectionView.frame.size.width
         
-        return CGSize(width: (width / numberOfColumns) - (xInsets + cellSpacing), height: 200)
+        return CGSize(width: (width / numberOfColumns) - (xInsets + cellSpacing), height: 240)
     }
 }
 

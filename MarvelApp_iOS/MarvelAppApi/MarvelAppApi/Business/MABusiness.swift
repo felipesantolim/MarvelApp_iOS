@@ -20,13 +20,17 @@ class MABusiness: MABusinessProtocol {
             let chars: [MACharactersModel] = JSONValue["data"]["results"].arrayValue.map { value in
                 
                 let thumbnail = MACharThumbnailModel(
-                    JSONValue["thumbnail"]["path"].stringValue,
-                    _extension: JSONValue["thumbnail"]["extension"].stringValue)
+                    value["thumbnail"]["path"].stringValue,
+                    _extension: value["thumbnail"]["extension"].stringValue)
                 
-                return MACharactersModel(
-                    value["id"].intValue,
-                    value["name"].stringValue,
-                    thumbnail)
+                return MACharactersModel(value["id"].intValue,
+                                         value["name"].stringValue,
+                                         thumbnail,
+                                         value["description"].stringValue,
+                                         value["comics"]["available"].intValue,
+                                         value["series"]["available"].intValue,
+                                         value["stories"]["available"].intValue,
+                                         value["events"]["available"].intValue)
             }
             completion(chars)
         }

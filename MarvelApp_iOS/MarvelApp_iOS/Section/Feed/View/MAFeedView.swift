@@ -19,4 +19,9 @@ class MAFeedView: UIView {
                                     forCellWithReuseIdentifier: R.nib.maFeedViewCell.identifier)
         }
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundColor = .black
+    }
 }
