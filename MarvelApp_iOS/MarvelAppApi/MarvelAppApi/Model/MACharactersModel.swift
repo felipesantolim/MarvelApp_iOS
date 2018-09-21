@@ -30,6 +30,20 @@ public struct MACharactersModel {
         self.stories = stories
         self.events = events
     }
+    
+    public static let KeyData: String = "data"
+    public static let KeyResults: String = "results"
+    public static let KeyThumbnail: String = "thumbnail"
+    public static let KeyPath: String = "path"
+    public static let KeyExtension: String = "extension"
+    public static let KeyUid: String = "id"
+    public static let KeyName: String = "name"
+    public static let KeyDescription: String = "description"
+    public static let KeyComics: String = "comics"
+    public static let KeySeries: String = "series"
+    public static let KeyStories: String = "stories"
+    public static let KeyEvents: String = "events"
+    public static let KeyAvailable: String = "available"
 }
 
 public struct MACharThumbnailModel {
