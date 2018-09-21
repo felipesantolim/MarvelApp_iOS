@@ -47,7 +47,7 @@ end
 
 Utilizei MVC com as camadas Infrastructure, Manager, Business e Provider a fim de abstrair toda a parte do API deixando todas as camadas mais clean. Separei o projeto junto a dois frameworks no workspace sendo eles "MarvelAppApi" e "MarvelAppSupport".
 
-<img src="" width="320"/>
+<img src="https://github.com/felipesantolim/MarvelApp_iOS/blob/master/Images/Screen%20Shot%202018-09-21%20at%2001.24.01.png" width="320"/>
 
 # Infrastructure:
 "Strings", "Plist", "Storyboard" e "Resources"
@@ -57,15 +57,20 @@ Utilizei MVC com as camadas Infrastructure, Manager, Business e Provider a fim d
  
  # View:
   Responsável por toda parte de apresentação, animação a regras de view. Para abstrair um pouco e deixar mais organizado mantenho todos os IBOutlets aqui ele eles são acessados direto pela controller:
-  ```<swift>
+  
+  ```<swift>
+  
   private var mainView: MAFeedView {
   return self.view as! MAFeedView
   }
+  
   ```
   
   # Manager:
    Nesta camada controlo o fluxo de requisições entre a camada ViewController e Business. Ela é exclusivamente chamada pela camada ViewController como uma interface.
+   
    ```<swift>
+   
    _ = MAManager.shared.fetchAllCharacters(with: currentPg, { _chars in
    if let `_chars` = _chars, _chars.count > 0 {
    _ = _chars.map { item in
@@ -78,9 +83,11 @@ Utilizei MVC com as camadas Infrastructure, Manager, Business e Provider a fim d
    self.mainView.collectionView.reloadData()
    }
    })
+   
    ```
    
    ```<swift>
+   
    public class MAManager: MAManagerProtocol {
    
    public static let shared = MAManager()
@@ -89,6 +96,7 @@ Utilizei MVC com as camadas Infrastructure, Manager, Business e Provider a fim d
    MABusiness.shared.fetchAllCharacters(with: pg, completion)
    }
    }   
+   
    ```
    
    # Business:
@@ -180,9 +188,12 @@ Utilizei MVC com as camadas Infrastructure, Manager, Business e Provider a fim d
      - OBS: Na pasta imagens que se encontra na raiz, possuem imagens e vídeos do projeto.
      
      # Icon
-     <img src="" width="100"/>
+     <img src="https://github.com/felipesantolim/MarvelApp_iOS/blob/master/Images/icon.jpg" width="100"/>
+     
+     #Slapshscreen
+     <img src="https://github.com/felipesantolim/MarvelApp_iOS/blob/master/Images/Splashscreen.PNG" width="320"/>
      
-     # Movies (Popular) List (Collection View)
+     # Chars List (Collection View)
      <img src="" width="320"/>
      <img src="" width="320"/>
      <img src="" width="320"/>
