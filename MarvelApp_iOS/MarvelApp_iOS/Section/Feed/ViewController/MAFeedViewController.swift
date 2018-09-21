@@ -8,10 +8,12 @@
 
 import UIKit
 import MarvelAppSupport
+import MarvelAppApi
 
 class MAFeedViewController: MABaseViewController {
     
     /// Properties
+    private var chars = [MACharactersModel]()
     private var mainView: MAFeedView {
         return self.view as! MAFeedView
     }
@@ -31,7 +33,16 @@ class MAFeedViewController: MABaseViewController {
     
     override func layout() {}
     
-    override func service() {}
+    override func service() {
+        _ = MAManager.shared.fetchAllCharacters(with: 0, { _chars in
+            if let `_chars` = _chars, _chars.count > 0 {
+                self.chars = _chars
+                _ = DispatchQueue.main.async {
+                    self.mainView.collectionView.reloadData()
+                }
+            }
+        })
+    }
     
 }
 
@@ -40,7 +51,7 @@ extension MAFeedViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int { return 1 }
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { return 12 }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { return chars.count }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.maFeedViewCell.identifier,

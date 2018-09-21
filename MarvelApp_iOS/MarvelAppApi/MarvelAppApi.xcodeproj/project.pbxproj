@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		34E28CEB21544ABB003D5478 /* MarvelAppApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28CE921544ABB003D5478 /* MarvelAppApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34E28D602154661C003D5478 /* MAServiceHTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D5F2154661C003D5478 /* MAServiceHTTP.swift */; };
+		34E28D62215467F3003D5478 /* MAProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D61215467F3003D5478 /* MAProviderProtocol.swift */; };
+		34E28D642154680A003D5478 /* MAProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D632154680A003D5478 /* MAProvider.swift */; };
+		34E28D6621546841003D5478 /* MABusinessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D6521546841003D5478 /* MABusinessProtocol.swift */; };
+		34E28D6821546853003D5478 /* MABusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D6721546853003D5478 /* MABusiness.swift */; };
+		34E28D6A2154687A003D5478 /* MAManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D692154687A003D5478 /* MAManagerProtocol.swift */; };
+		34E28D6C2154688C003D5478 /* MAManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D6B2154688C003D5478 /* MAManager.swift */; };
+		34E28D6E21546939003D5478 /* MACharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E28D6D21546939003D5478 /* MACharactersModel.swift */; };
 		DAA201AD03B4C4AA588977BC /* Pods_MarvelAppApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19874681766CDA3F030585E /* Pods_MarvelAppApi.framework */; };
 /* End PBXBuildFile section */
 
@@ -16,6 +24,14 @@
 		34E28CE621544ABB003D5478 /* MarvelAppApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelAppApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E28CE921544ABB003D5478 /* MarvelAppApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarvelAppApi.h; sourceTree = "<group>"; };
 		34E28CEA21544ABB003D5478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34E28D5F2154661C003D5478 /* MAServiceHTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAServiceHTTP.swift; sourceTree = "<group>"; };
+		34E28D61215467F3003D5478 /* MAProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAProviderProtocol.swift; sourceTree = "<group>"; };
+		34E28D632154680A003D5478 /* MAProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAProvider.swift; sourceTree = "<group>"; };
+		34E28D6521546841003D5478 /* MABusinessProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MABusinessProtocol.swift; sourceTree = "<group>"; };
+		34E28D6721546853003D5478 /* MABusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MABusiness.swift; sourceTree = "<group>"; };
+		34E28D692154687A003D5478 /* MAManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAManagerProtocol.swift; sourceTree = "<group>"; };
+		34E28D6B2154688C003D5478 /* MAManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAManager.swift; sourceTree = "<group>"; };
+		34E28D6D21546939003D5478 /* MACharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACharactersModel.swift; sourceTree = "<group>"; };
 		63410A05F2E881785DC68B47 /* Pods-MarvelAppApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppApi.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MarvelAppApi/Pods-MarvelAppApi.debug.xcconfig"; sourceTree = "<group>"; };
 		C19874681766CDA3F030585E /* Pods_MarvelAppApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelAppApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +90,7 @@
 		34E28D5921545AB6003D5478 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				34E28D6D21546939003D5478 /* MACharactersModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -81,6 +98,9 @@
 		34E28D5A21545AB6003D5478 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				34E28D61215467F3003D5478 /* MAProviderProtocol.swift */,
+				34E28D632154680A003D5478 /* MAProvider.swift */,
+				34E28D5F2154661C003D5478 /* MAServiceHTTP.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -88,6 +108,8 @@
 		34E28D5B21545AB6003D5478 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				34E28D692154687A003D5478 /* MAManagerProtocol.swift */,
+				34E28D6B2154688C003D5478 /* MAManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -95,6 +117,8 @@
 		34E28D5C21545AB6003D5478 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				34E28D6521546841003D5478 /* MABusinessProtocol.swift */,
+				34E28D6721546853003D5478 /* MABusiness.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -153,6 +177,7 @@
 				TargetAttributes = {
 					34E28CE521544ABB003D5478 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -224,6 +249,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E28D62215467F3003D5478 /* MAProviderProtocol.swift in Sources */,
+				34E28D6E21546939003D5478 /* MACharactersModel.swift in Sources */,
+				34E28D602154661C003D5478 /* MAServiceHTTP.swift in Sources */,
+				34E28D6821546853003D5478 /* MABusiness.swift in Sources */,
+				34E28D642154680A003D5478 /* MAProvider.swift in Sources */,
+				34E28D6C2154688C003D5478 /* MAManager.swift in Sources */,
+				34E28D6621546841003D5478 /* MABusinessProtocol.swift in Sources */,
+				34E28D6A2154687A003D5478 /* MAManagerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63410A05F2E881785DC68B47 /* Pods-MarvelAppApi.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +408,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsantolim.MarvelAppApi;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -383,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2226DC9082C7C88D52C72BFC /* Pods-MarvelAppApi.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

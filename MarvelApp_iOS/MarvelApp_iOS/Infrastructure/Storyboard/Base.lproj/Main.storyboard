@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movies-->
+        <!--Chars © 2018 MARVEL-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MAFeedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MAFeedViewController" customModule="MarvelApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                             <outlet property="collectionView" destination="vqn-yg-CkB" id="PXp-UT-4Qn"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" id="S5J-sQ-9AB"/>
+                    <navigationItem key="navigationItem" title="Chars © 2018 MARVEL" id="S5J-sQ-9AB"/>
                     <connections>
                         <segue destination="PDW-na-774" kind="show" id="kRm-3m-XSz"/>
                     </connections>

@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.7.1)
   - Crashlytics (3.10.1):
     - Fabric (~> 1.7.5)
+  - CryptoSwift (0.9.0)
   - Fabric (1.7.6)
   - Kingfisher (4.6.4)
   - lottie-ios (2.5.0)
@@ -14,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Crashlytics
+  - CryptoSwift
   - Fabric
   - Kingfisher
   - lottie-ios
@@ -24,6 +26,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  CryptoSwift: bca8c5b653dcc2d9734409242a070ff53bafac86
   Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
@@ -32,6 +35,6 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 164de62c8da5f0378962bf726ce99e24fcf0f585
+PODFILE CHECKSUM: 59257b62682130ea133afd5b103eaeaeeac4b22c
 
 COCOAPODS: 1.4.0

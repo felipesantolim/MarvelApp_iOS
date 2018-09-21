@@ -12,6 +12,7 @@ target 'MarvelApp_iOS' do
   pod 'Kingfisher'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Alamofire', '~> 4.7'
+  pod 'CryptoSwift'
   
   target 'MarvelApp_iOSTests' do
     inherit! :search_paths
@@ -27,6 +28,7 @@ target 'MarvelAppApi' do
     project 'MarvelAppApi/MarvelAppApi.xcodeproj'
     pod 'SwiftyJSON', '~> 4.0'
     pod 'Alamofire', '~> 4.7'
+    pod 'CryptoSwift'
 end
 
 target 'MarvelAppSupport' do
